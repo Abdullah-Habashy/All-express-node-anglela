@@ -1,0 +1,26 @@
+# Studio Spine — main config (DRAFT, Phase 0)
+# Values marked TODO wait for Tyson's answers at Approval Gate 0.
+
+[hardware]
+tier = "T1"                  # PROVISIONAL — see docs/DECISIONS.md; re-evaluate from ENVIRONMENT_REPORT_WORKSTATION.md
+tier_source = "provisional"  # provisional | workstation_audit
+gpu = "unknown"
+vram_gb = 0
+
+[paths]
+# Windows paths, forward slashes are fine. Keep DB + proxies off cloud-sync / network folders.
+projects_root = ""           # TODO Q1
+ingest_root = ""             # TODO Q1 (downloads / ingest)
+deliveries_root = ""         # TODO Q1
+db_path = ""                 # TODO Q2 (e.g. <fast SSD>/StudioSpine/db/spine.sqlite)
+proxies_root = ""            # TODO Q2
+trash_dir_name = "_spine_trash"
+
+[server]
+host = "127.0.0.1"
+http_port = 8765             # TODO Q3 confirm
+
+[night_window]
+enabled = false
+start = "01:00"
+end = "07:00"
